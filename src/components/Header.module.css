@@ -1,0 +1,23 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+}
+
+.navbar p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 15px;
+  color: #ffffff;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo h3 {
+  margin-left: 20px;
+}
