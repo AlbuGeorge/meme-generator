@@ -28,8 +28,29 @@
   max-width: 600px;
 }
 
+.imgCont {
+  grid-column: 1 / -1;
+  position: relative;
+}
+
+.top__text {
+  position: absolute;
+  top: 10px;
+  z-index: 3;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.botttom__text {
+  position: absolute;
+  bottom: 10px;
+  z-index: 3;
+  left: 50%;
+  transform: translate(-50%);
+  color: black;
+}
+
 .meme__img {
   width: 100%;
   object-fit: contain;
-  grid-column: 1 / -1;
 }

@@ -4,8 +4,8 @@ import classes from './Meme.module.css'
 
 const Meme = () => {
   const [meme, setMeme] = useState({
-    topText: '',
-    bottomText: '',
+    topText: 'Top Text',
+    bottomText: 'Bottom Text',
     randomImage: 'http://i.imgflip.com/1bij.jpg',
   })
   const [allMemeImages, setAllMemeImages] = useState('')
@@ -37,7 +37,11 @@ const Meme = () => {
         <button onClick={getRandomImage} className={classes.form__button}>
           Get a new meme image 🖼
         </button>
-        <img className={classes.meme__img} src={meme.randomImage} />
+        <div className={classes.imgCont}>
+          <img className={classes.meme__img} src={meme.randomImage} />
+          <div className={classes.top__text}>{meme.topText}</div>
+          <div className={classes.bottom__text}>{meme.bottomText}</div>
+        </div>
       </div>
     </div>
   )
