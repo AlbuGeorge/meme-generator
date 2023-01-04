@@ -4,8 +4,8 @@ import classes from './Meme.module.css'
 
 const Meme = () => {
   const [meme, setMeme] = useState({
-    topText: 'Top Text',
-    bottomText: 'Bottom Text',
+    topText: '',
+    bottomText: '',
     randomImage: 'http://i.imgflip.com/1bij.jpg',
   })
   const [allMemeImages, setAllMemeImages] = useState('')
@@ -29,13 +29,34 @@ const Meme = () => {
     setAllMemeImages(res)
   }
 
+  const handleChange = (event) => {
+    const { name, value } = event.target
+    setMeme((prevMeme) => ({
+      ...prevMeme,
+      [name]: value,
+    }))
+  }
+
   return (
     <div className={classes.main__section}>
+      <p>Some images will not fit the text, generate another image. 😊</p>
       <div className={classes.form}>
-        <input type="text" placeholder="Top text" />
-        <input type="text" placeholder="Bottom text" />
+        <input
+          type="text"
+          placeholder="Top text"
+          name="topText"
+          onChange={handleChange}
+          value={meme.topText}
+        />
+        <input
+          type="text"
+          placeholder="Bottom text"
+          name="bottomText"
+          onChange={handleChange}
+          value={meme.bottomText}
+        />
         <button onClick={getRandomImage} className={classes.form__button}>
-          Get a new meme image 🖼
+          Get a new meme image 🖼️
         </button>
         <div className={classes.imgCont}>
           <img className={classes.meme__img} src={meme.randomImage} />
