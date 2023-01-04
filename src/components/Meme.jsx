@@ -39,7 +39,9 @@ const Meme = () => {
 
   return (
     <div className={classes.main__section}>
-      <p>Some images will not fit the text, generate another image. 😊</p>
+      <p className={classes.warning}>
+        Some images will not fit the text, generate another image. 😊
+      </p>
       <div className={classes.form}>
         <input
           type="text"

@@ -77,7 +77,7 @@
   border-radius: 3px;
 }
 
-p {
+.warning {
   color: gray;
   text-align: center;
   margin: 0;
